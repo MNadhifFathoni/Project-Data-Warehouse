@@ -1,0 +1,34 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Environment variables
+.env
+
+# Local data (staging, dwh, mart output)
+data/staging/
+data/dwh/
+data/mart/
+
+# Raw Natural Earth download (reproducible)
+data/shapefile/ne_10m_admin_1_states_provinces/
+data/shapefile/ne_10m_admin_0_*/
+
+# R files
+.Rhistory
+
+# Generated HTML
+*.html
+
+# Logs
+logs/
+
+# Research references (PDFs too large for git)
+Sumber Referensi/
