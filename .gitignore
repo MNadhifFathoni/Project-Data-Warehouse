@@ -13,9 +13,13 @@ wheels/
 .env
 
 # Local data (staging, dwh, mart output)
-data/staging/
+# data/staging/ — STAGING CSVs ARE NEEDED FOR DEPLOYMENT, committed to repo
 data/dwh/
 data/mart/
+
+# DuckDB database (regenerable from staging CSVs)
+data/dwh/disaster.duckdb
+data/dwh/disaster.duckdb.wal
 
 # Raw Natural Earth download (reproducible)
 data/shapefile/ne_10m_admin_1_states_provinces/

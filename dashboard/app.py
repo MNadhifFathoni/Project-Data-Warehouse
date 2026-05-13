@@ -33,3 +33,7 @@ with st.sidebar:
     st.caption("Semester 4 — 2025/2026")
 
 pages[choice]()
+
+
+def main():
+    pass

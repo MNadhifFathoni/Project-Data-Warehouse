@@ -66,6 +66,41 @@ streamlit run dashboard/app.py --server.port 8502
 uv sync
 ```
 
+### 6. Deploy ke Streamlit Cloud (Online / Publik)
+
+Dashboard bisa di-deploy gratis ke **Streamlit Community Cloud** agar bisa diakses siapa saja via browser tanpa instalasi.
+
+**Langkah-langkah:**
+
+1. **Push project ke GitHub** (sudah dilakukan):
+   ```
+   https://github.com/MNadhifFathoni/Project-Data-Warehouse
+   ```
+
+2. **Buka** [Streamlit Community Cloud](https://streamlit.io/cloud) → klik **Sign in with GitHub**
+
+3. **Klik "New app"** → pilih repository `MNadhifFathoni/Project-Data-Warehouse`
+
+4. **Konfigurasi:**
+   - **Branch**: `master`
+   - **Main file path**: `dashboard/app.py`
+   - **Click "Deploy"**
+
+5. **Set secrets** (`.env` untuk API key):
+   - Settings → Secrets → Tambah:
+   ```toml
+   FIRMS_MAP_KEY = "20fd9a932d5532c30c85afc4eee7afb3"
+   ```
+
+6. **Tunggu build selesai** (~5-10 menit pertama, lebih cepat untuk update berikutnya)
+
+7. **Dashboard online!** URL akan seperti:
+   ```
+   https://project-data-warehouse.streamlit.app/
+   ```
+
+**Catatan:** Data DuckDB tidak ikut push ke GitHub (ukuran besar, ada di `.gitignore`). Streamlit Cloud akan rebuild database dari CSV staging saat pertama deploy. Pastikan CSV staging sudah ada.
+
 ---
 
 ## 🖥️ Semua Cara Menggunakan Project
